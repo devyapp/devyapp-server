@@ -5,7 +5,8 @@ const projectModel = new Schema({
   description: { type: String, maxlength: 500 },
   active: { type: Boolean, default: true },
   createdAt: { type: Date, default: Date.now },
-  users: [{ type: Schema.Types.ObjectId, ref: 'User' }]
+  user: { type: Schema.Types.ObjectId, ref: 'User' },
+  colors:{ type: Schema.Types.ObjectId, ref: 'Color' },
 })
 
 module.exports = model('Project', projectModel)

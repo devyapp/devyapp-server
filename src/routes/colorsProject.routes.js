@@ -1,13 +1,13 @@
 const route = require('express').Router()
 const { 
-  getAllColors,
+  getAllColorsProject,
   getOneColor,
   createColor,
   editColor,
   disableColor
-} = require('../controllers/color.controller')
+} = require('../controllers/colorProject.controller')
 
-route.get('/', getAllColors)
+route.get('/', getAllColorsProject)
 route.get('/:id', getOneColor)
 route.post('/', createColor)
 route.put('/:id', editColor)

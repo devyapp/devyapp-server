@@ -8,7 +8,7 @@ const userModel = new Schema({
   active: { type: Boolean, default: true },
   password: { type: String, maxlength: 500 },
   createdAt: { type: Date, default: Date.now },
-  projects: [{ type: Schema.Types.ObjectId, ref: 'Project' }]
+  projects: [{ type: Schema.Types.ObjectId, ref: 'Project', default: [] }]
 })
 
 module.exports = model('User', userModel)

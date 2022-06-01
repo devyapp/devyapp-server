@@ -17,8 +17,9 @@ app.get('/default-img', (req, res) => {
 })
 
 app.use('/api/user', require('./routes/users.routes'))
-app.use('/api/color', require('./routes/colors.routes'))
+app.use('/api/color', require('./routes/colorsProject.routes'))
 app.use('/api/task', require('./routes/tasks.routes'))
+app.use('/api/auth', require('./routes/auth.routes'))
 
 const PORT = process.env.PORT
 

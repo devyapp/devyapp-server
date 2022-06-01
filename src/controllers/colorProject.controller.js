@@ -1,8 +1,8 @@
-const Color = require("../models/color.model")
+const Color = require("../models/colorsProject.model")
 
-async function getAllColors(req, res) {
-  const allColors = await Color.find()
-  res.json(allColors)
+async function getAllColorsProject(req, res) {
+  const allColorsProject = await Color.find()
+  res.json(allColorsProject)
 }
 
 async function getOneColor(req, res) {
@@ -38,7 +38,7 @@ async function disableColor(req, res) {
 }
 
 module.exports = {
-  getAllColors,
+  getAllColorsProject,
   getOneColor,
   createColor,
   editColor,
